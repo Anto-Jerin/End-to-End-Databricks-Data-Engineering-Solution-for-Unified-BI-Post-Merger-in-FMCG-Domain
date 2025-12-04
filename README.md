@@ -60,4 +60,12 @@ The core problem is the immediate need for a unified and reliable source of busi
 
 <img width="1549" height="798" alt="Data Pipeline" src="https://github.com/user-attachments/assets/2d42af0b-2938-4c54-b115-2a3c602bbecb" />
 
+## Scheduled Data Ingestion Job For New and Future Data
 
+<img width="1501 " height="447" alt="Data Pipeline" src="https://github.com/Anto-Jerin/End-to-End-Databricks-Data-Engineering-Solution-for-Unified-BI-Post-Merger-in-FMCG-Domain/blob/995f733043cda2ffa6fd86c3e04c451b4fccb5eb/Automatic%20Scheduled%20Ingestion%20for%20New%20Data.png" />
+
+> * Scheduled to run at 22:00 IST every day
+> * Logs the time taken, tables accessed, time each file was accessed in S3 buckets, errors, failures, and success
+> * To prevent any conflict among dependent tables, the tables are updated in a conflict free order.
+> * The data pipeline will not move forward to alter the next table in line if the current operation fails, protecting the pipeline from having catastrophic cascading effects
+> * Automatically sends alert emails when a job starts, ends, fails, or succeeds. 
